@@ -1,16 +1,11 @@
 build: clear 
-	gcc -lc main.c -o main
+	gcc -std=gnu90 -lc main.c -o rac
 
 debug: clear
-	gcc -lc main.c -g -o main
+	gcc -std=gnu90 -lc main.c -g -o rac
 
 clear:
-	rm -f main
+	rm -f rac
 
 all: build
 
-run: build
-	./main --path main.c --comm "cat main.c"
-
-run-debug: debug
-	gdb ./main --path main.c --comm "cat main.c"
