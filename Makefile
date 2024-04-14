@@ -10,7 +10,7 @@ clear:
 all: build
 
 run: build
-	./main main.c "cat main.c"
+	./main --path main.c --comm "cat main.c"
 
 run-debug: debug
-	gdb ./main main.c "cat main.c"
+	gdb ./main --path main.c --comm "cat main.c"
